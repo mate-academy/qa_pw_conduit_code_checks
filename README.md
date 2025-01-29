@@ -1,1 +1,1 @@
-# qa_pw_conduit_code_checks
+Playwright: Plactical task for set up automatic code checks for Conduit project. 
