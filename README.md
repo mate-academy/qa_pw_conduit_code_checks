@@ -10,16 +10,16 @@
 
 1. Set up the ESLint using the instructions from the theory:
 
-  - Run the `npx eslint` command and make sure you see the list of errors.
-  - Fix all the bugs in the code.
+    - Run the `npx eslint` command and make sure you see the list of errors.
+    - Fix all the bugs in the code.
 
 2. Set up the Prettier using the instructions from the theory block.
 3. Set up the Husky and Lint-Staged using the instructions from the theory block.
 4. Re-run all your tests and make sure they pass after the updates.
 5. Commit all your updates:
 
-  - To see all the ESlint errors in the terminal, you can run the ` git commit -m "<commit message>"` from the terminal.
-  - Fix all remaining errors if they exist. You will not be able to do a commit until you fix the errors.
+    - To see all the ESlint errors in the terminal, you can run the ` git commit -m "<commit message>"` from the terminal.
+    - Fix all remaining errors if they exist. You will not be able to do a commit until you fix the errors.
 
 ## Task Reporting
 
