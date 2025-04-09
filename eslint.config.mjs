@@ -4,6 +4,11 @@ import globals from "globals";
 import playwright from 'eslint-plugin-playwright';
 
 export default defineConfig([
+  {
+    rules: {
+      'eol-last': ['error', 'always'],
+    },
+  },
   { 
     files: ["**/*.{js,mjs,cjs}"],
     plugins: { js },
