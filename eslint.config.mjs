@@ -1,0 +1,33 @@
+import { defineConfig } from "eslint/config";
+import js from "@eslint/js";
+import globals from "globals";
+import playwright from 'eslint-plugin-playwright';
+
+export default defineConfig([
+  { 
+    files: ["**/*.{js,mjs,cjs}"],
+    plugins: { js },
+    extends: ["js/recommended"],
+    rules: {
+      'no-unused-vars': 'error',
+      'max-len': [
+        'error', {
+          code: 80,
+          comments: 80,
+        },
+      ],
+    },
+  },
+  { 
+    files: ["**/*.{js,mjs,cjs}"], 
+    languageOptions: { globals: globals.browser },
+  },
+  {
+    ...playwright.configs['flat/recommended'],
+    files: ['tests/**'],
+    rules: {
+      ...playwright.configs['flat/recommended'].rules,
+      'playwright/expect-expect': 'off',
+    },
+  },
+]);
