@@ -20,7 +20,8 @@ export default defineConfig([
   },
   { 
     files: ["**/*.{js,mjs,cjs}"], 
-    languageOptions: { globals: globals.browser },
+    languageOptions: { globals: globals.node }, 
+    //set above to node to avoid errors with process.env
   },
   {
     ...playwright.configs['flat/recommended'],
