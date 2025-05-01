@@ -15,7 +15,7 @@ export default {
   },
   rules: {
     ...pluginJs.configs.recommended.rules,
-    ...playwright.configs['flat/recommended'].rules,
+    ...playwright.configs.recommended.rules,
     'no-unused-vars': 'error',
     'max-len': ['error', { code: 80, comments: 80 }],
     'playwright/expect-expect': 'off',
