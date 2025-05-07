@@ -7,7 +7,7 @@ export class SignUpPage {
     this.emailField = page.getByPlaceholder('Email');
     this.passwordField = page.getByPlaceholder('Password');
     this.signUpButton = page.getByRole('button', { name: 'Sign up' });
-    this.errorMessage = page.getByRole('list').nth(1);
+    this.errorMessage = page.locator('.error-messages');
   }
 
   async open() {
