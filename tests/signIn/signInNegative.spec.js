@@ -12,7 +12,7 @@ test.describe('Sign in negative tests', () => {
   test('Assert error message for empty password', async () => {
     await signInPage.fillEmailField('test@gmail.com');
     await signInPage.clickSignInButton();
-    await signInPage.assertErrorMessageContainsText(`password:can\'t be blank`);
+    await signInPage.assertErrorMessageContainsText(`password:can't be blank`);
   });
 
   test('Assert error message for empty email', async ({}) => {

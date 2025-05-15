@@ -8,7 +8,6 @@ export default [
     languageOptions: {
       globals: globals.node,
     },
-    
     plugins: {
       playwright: eslintPluginPlaywright,
     },
@@ -23,11 +22,13 @@ export default [
       ],
       'playwright/expect-expect': 'off',
     },
+  },
+  eslintConfigPrettier,
+  {
     ignores: [
       '**/node_modules/*',
       'playwright.config.js',
       '**/playwright-report/**',
     ],
   },
-  eslintConfigPrettier,
 ];
