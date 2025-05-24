@@ -6,8 +6,6 @@ export class HomePage {
     this.yourFeedTab = page.getByText("Your Feed");
   }
 
-  async testFuch() {}
-
   async assertYourFeedTabIsVisible() {
     await expect(this.yourFeedTab).toBeVisible();
   }
