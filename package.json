@@ -8,7 +8,9 @@
     "playwright-core": "^1"
   },
   "devDependencies": {
-    "@playwright/test": "^1"
+    "@playwright/test": "^1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0"
   },
   "scripts": {},
   "keywords": [],
