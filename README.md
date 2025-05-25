@@ -1,6 +1,6 @@
 # Set Up Automatic Code Checks for a Conduit Project
 
-## Preparation
+## Preparation  
 
 1. Open the forked repo in VSCode.
 2. Create a new branch by running `git checkout -b task_solution`.
