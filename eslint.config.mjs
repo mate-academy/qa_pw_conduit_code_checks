@@ -12,6 +12,7 @@ export default [
     rules: {
       ...playwright.configs['flat/recommended'].rules,
       ...pluginJs.configs.recommended.rules,
+      ...eslintConfigPrettier.rules, // ⬅️ гарантія переваги prettier
 
       'no-unused-vars': 'error',
       'max-len': [
@@ -29,5 +30,4 @@ export default [
       '**/playwright-report/**',
     ],
   },
-  eslintConfigPrettier,
 ];
