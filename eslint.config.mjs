@@ -3,7 +3,7 @@ import pluginJs from '@eslint/js';
 import playwright from 'eslint-plugin-playwright';
 import eslintConfigPrettier from 'eslint-config-prettier';
 
-/** @type {import('eslint').Linter.Config[]} */
+/** @type {import('eslint').ESLint.FlatConfigData[]} */
 export default [
   { languageOptions: { globals: globals.node } },
   eslintConfigPrettier,
