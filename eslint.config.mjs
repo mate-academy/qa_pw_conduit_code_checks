@@ -7,10 +7,12 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 export default defineConfig([
   {
     files: ['**/*.{js,mjs,cjs}'],
+    /*
     plugins: {
       '@eslint/js': js,
     },
-    //extends: ['js/recommended'],
+    extends: ['js/recommended'],
+    */
   },
   { files: ['**/*.{js,mjs,cjs}'], languageOptions: { globals: globals.node } },
   eslintConfigPrettier,
