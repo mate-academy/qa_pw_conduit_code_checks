@@ -10,6 +10,11 @@ export default [
   {
     ...pluginJs.configs.recommended,
     ...playwright.configs['flat/recommended'],
+    ignores: [
+      '**/node_modules/*',
+      'playwright.config.js',
+      '**/playwright-report/**',
+    ],
     rules: {
       ...pluginJs.configs.recommended.rules,
       'no-unused-vars': 'error',
@@ -23,10 +28,5 @@ export default [
       ...playwright.configs['flat/recommended'].rules,
       'playwright/expect-expect': 'off',
     },
-    ignores: [
-      '**/node_modules/*',
-      'playwright.config.js',
-      '**/playwright-report/**',
-    ],
   },
 ];
