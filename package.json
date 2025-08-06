@@ -23,16 +23,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.{js,md}": [
-      "prettier --write",
-      "eslint --fix"
-    ]
+  "*.js": ["eslint --fix", "prettier --write"]
   }
 }
