@@ -37,3 +37,4 @@ test.describe("Sign up negative tests", () => {
     await signUpPage.assertErrorMessageContainsText(`password:can't be blank`);
   });
 });
+//Here is a comment to have something t o commit
