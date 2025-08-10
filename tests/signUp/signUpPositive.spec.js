@@ -3,7 +3,7 @@ import { faker } from "@faker-js/faker";
 import { SignUpPage } from "../../src/pages/SignUpPage";
 import { HomePage } from "../../src/pages/HomePage";
 
-test.describe("Sign up positive tests", () => {
+test.describe("Sign  up positive tests", () => {
   let user;
 
   test.beforeEach(async () => {
@@ -14,7 +14,7 @@ test.describe("Sign up positive tests", () => {
     };
   });
 
-  test("Successful `Sign up` flow test", async ({ page }) => {
+  test("Successful `Sign  up` flow test", async ({ page }) => {
     const signUpPage = new SignUpPage(page);
     const homePage = new HomePage(page);
 
