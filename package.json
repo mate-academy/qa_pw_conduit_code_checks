@@ -8,21 +8,16 @@
     "playwright-core": "^1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.33.0",
+    "@eslint/js": "^9.32.0",
     "@playwright/test": "^1",
-    "eslint": "^9.33.0",
+    "eslint": "^9.32.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-playwright": "^2.2.2",
-    "eslint-plugin-prettier": "^5.5.4",
-    "globals": "^16.3.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.1.5",
+    "lint-staged": "^16.1.4",
     "prettier": "^3.6.2"
   },
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier --write .",
     "prepare": "husky"
   },
   "keywords": [],
@@ -34,9 +29,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,md}": [
-      "prettier --write",
-      "eslint --fix"
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
     ]
   }
 }
