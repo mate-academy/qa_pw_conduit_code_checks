@@ -1,17 +1,10 @@
-import js from '@eslint/js';
 import globals from 'globals';
-import { defineConfig } from 'eslint/config';
 import pluginJs from '@eslint/js';
 import playwright from 'eslint-plugin-playwright';
 import eslintConfigPrettier from 'eslint-config-prettier';
 
-export default defineConfig([
-  {
-    files: ['**/*.{js,mjs,cjs}'],
-    plugins: { js },
-    extends: ['js/recommended'],
-    languageOptions: { globals: globals.node },
-  },
+export default [
+  { languageOptions: { globals: globals.node } },
   eslintConfigPrettier,
   {
     ...pluginJs.configs.recommended,
@@ -35,4 +28,4 @@ export default defineConfig([
       '**/playwright-report/**',
     ],
   },
-]);
+];
