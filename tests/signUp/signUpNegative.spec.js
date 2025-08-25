@@ -15,7 +15,7 @@ test.describe("Sign up negative tests", () => {
     await signUpPage.clickSignUpButton();
 
     await signUpPage.assertErrorMessageContainsText(
-      `username:Username must start with a letter, have no spaces, and be 2 - 40 characters.`
+      `username:Username must start with a letter, have no spaces, and be 2 - 40 characters.`,
     );
   });
 
@@ -25,7 +25,7 @@ test.describe("Sign up negative tests", () => {
     await signUpPage.clickSignUpButton();
 
     await signUpPage.assertErrorMessageContainsText(
-      `email:This email does not seem valid.`
+      `email:This email does not seem valid.`,
     );
   });
 
@@ -37,3 +37,4 @@ test.describe("Sign up negative tests", () => {
     await signUpPage.assertErrorMessageContainsText(`password:can't be blank`);
   });
 });
+//Here is a comment to have something t o commit
