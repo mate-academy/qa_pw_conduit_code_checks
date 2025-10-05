@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+echo "🔍 Running ESLint and Prettier checks..."
+npx lint-staged
