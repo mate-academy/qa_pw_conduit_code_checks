@@ -12,14 +12,16 @@ export default [
     },
   },
 
-  // Вимикає конфліктні правила форматування
-  eslintConfigPrettier,
+  
 
   // Базові ESLint правила
   pluginJs.configs.recommended,
 
   // Playwright recommended (flat)
   playwright.configs["flat/recommended"],
+
+  // Вимикає конфліктні правила форматування
+  eslintConfigPrettier,
 
   {
     rules: {
