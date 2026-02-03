@@ -1,6 +1,7 @@
 {
   "name": "qa_pw_intro",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -8,9 +9,24 @@
     "playwright-core": "^1"
   },
   "devDependencies": {
-    "@playwright/test": "^1"
+    "@playwright/test": "^1",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-playwright": "^2.5.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.2",
+    "prettier": "^3.8.1"
   },
-  "scripts": {},
+  "lint-staged": {
+    "*.{js,md}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "scripts": {
+    "prepare": "husky",
+    "test": "playwright test"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
