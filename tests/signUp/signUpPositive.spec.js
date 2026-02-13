@@ -20,8 +20,6 @@ test.describe("Sign up positive tests", () => {
   });
 
   test("Successful `Sign up` flow test", async ({ page }) => {
-    const signUpPage = new SignUpPage(page);
-
     await signUpPage.open();
     await signUpPage.fillUsernameField(user.username);
     await signUpPage.fillEmailField(user.email);
