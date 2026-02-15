@@ -2,7 +2,7 @@ import globals from "globals";
 import pluginJs from "@eslint/js";
 import playwright from "eslint-plugin-playwright";
 
-/** @type {import('eslint').Linter.Config[]} */
+/** @type {import('eslint').FlatConfig[]} */
 export default [
     pluginJs.configs.recommended,
     playwright.configs["flat/recommended"],

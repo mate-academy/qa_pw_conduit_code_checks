@@ -15,7 +15,7 @@ test.describe("Sign in negative tests", () => {
     await signInPage.assertErrorMessageContainsText(`password:can\'t be blank`);
   });
 
-  test("Assert error message for empty email", async ({ page }) => {
+  test("Assert error message for empty email", async () => {
     await signInPage.fillPasswordField("newpass123!");
     await signInPage.clickSignInButton();
     await signInPage.assertErrorMessageContainsText(`email:can't be blank`);
