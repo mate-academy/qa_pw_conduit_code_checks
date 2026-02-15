@@ -12,8 +12,8 @@ test.describe("Sign in positive tests", () => {
     homePage = new HomePage(page);
 
     user = {
-      email: "test_new_user@gmail.com",
-      password: "newpass123!",
+      email: "test_new_u@gmail.com",
+      password: "123Test!",
     };
   });
 
