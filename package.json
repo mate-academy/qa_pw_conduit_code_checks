@@ -8,10 +8,22 @@
     "playwright-core": "^1"
   },
   "devDependencies": {
-    "@playwright/test": "^1"
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1",
+    "eslint": "^10.1.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-playwright": "^2.10.1",
+    "globals": "^17.4.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.1"
   },
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky"
+  },
   "keywords": [],
   "author": "",
-  "license": "ISC"
-}
+  "license": "ISC",
+  "lint-staged": {
+    "*.{js,mjs}": [
+      "prettier --write",
