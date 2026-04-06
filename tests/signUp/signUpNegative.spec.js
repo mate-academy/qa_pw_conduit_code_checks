@@ -15,7 +15,7 @@ test.describe('Sign up negative tests', () => {
     await signUpPage.clickSignUpButton();
 
     await signUpPage.assertErrorMessageContainsText(
-      `Username must start with a letter and have no spaces.`,
+      `username:This username does not seem valid.`,
     );
   });
 
