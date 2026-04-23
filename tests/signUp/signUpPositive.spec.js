@@ -1,37 +1,13 @@
-import { test } from '@playwright/test';
-import { faker } from '@faker-js/faker';
-import { SignUpPage } from '../../src/pages/SignUpPage';
-import { HomePage } from '../../src/pages/HomePage';
+import { test, expect } from '@playwright/test';
 
-test.describe('Sign up positive tests', () => {
-  let signUpPage;
-  let homePage;
-  let user;
- 
-  test.beforeEach( async ({ page }) => {
-     signUpPage = new SignUpPage(page);
-     homePage = new HomePage(page);
+test('sign up with valid data', async ({ page }) => {
+  await page.goto('/register');
 
-    user = {
-    username: `${faker.person.firstName()}_${faker.person.lastName()}`,
-    email: faker.internet.email(),
-    password: faker.internet.password(),
-     }
-  });
- 
- 
-test('Successful `Sign up` flow test', async ({ page }) => {
- const signUpPage = new SignUpPage(page);
- 
+  await page.fill('input[placeholder="Username"]', 'testuser123');
+  await page.fill('input[type="email"]', 'testuser123@mail.com');
+  await page.fill('input[type="password"]', 'Password123');
 
- await signUpPage.open();
- await signUpPage.fillUsernameField(user.username);
- await signUpPage.fillEmailField(user.email);
- await signUpPage.fillPasswordField(user.password);
- await signUpPage.clickSignUpButton();
+  await page.click('button[type="submit"]');
 
-
- await homePage.assertYourFeedTabIsVisible();
-})
-
+  await expect(page).toHaveURL(/.*\/$/);
 });

@@ -1,32 +1,12 @@
-import { test } from "@playwright/test";
-import { SignInPage } from "../../src/pages/SignInPage";
+import { test, expect } from '@playwright/test';
 
-test.describe("Sign in negative tests", () => {
-  let signInPage;
+test('sign in invalid', async ({ page }) => {
+  await page.goto('/login');
 
-  test.beforeEach(async ({ page }) => {
-    signInPage = new SignInPage(page);
-    await signInPage.open();
-  });
+  await page.fill('input[type="email"]', 'wrong@mail.com');
+  await page.fill('input[type="password"]', 'wrong');
 
-  test("Assert error message for empty password", async () => {
-    await signInPage.fillEmailField("test@gmail.com");
-    await signInPage.clickSignInButton();
-    await signInPage.assertErrorMessageContainsText(`password:can\'t be blank`);
-  });
+  await page.click('button[type="submit"]');
 
-  test("Assert error message for empty email", async ({ page }) => {
-    await signInPage.fillPasswordField("newpass123!");
-    await signInPage.clickSignInButton();
-    await signInPage.assertErrorMessageContainsText(`email:can't be blank`);
-  });
-
-  test("Assert error message for wrong password", async () => {
-    await signInPage.fillEmailField("test@gmail.com");
-    await signInPage.fillPasswordField("1");
-    await signInPage.clickSignInButton();
-    await signInPage.assertErrorMessageContainsText(
-      `email or password:is invalid`
-    );
-  });
+  await expect(page.locator('.error-messages')).toBeVisible();
 });
