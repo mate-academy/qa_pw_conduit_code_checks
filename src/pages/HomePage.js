@@ -7,6 +7,6 @@ export class HomePage {
   }
 
   async assertYourFeedTabIsVisible() {
-    await expect(this.yourFeedTab).toBeHidden();
+    await expect(this.yourFeedTab).toBeVisible();
   }
 }
