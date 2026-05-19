@@ -3,14 +3,34 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,md}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
   "dependencies": {
     "@faker-js/faker": "^9",
     "playwright-core": "^1"
   },
   "devDependencies": {
-    "@playwright/test": "^1"
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1",
+    "eslint": "^10.4.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.6.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.5",
+    "prettier": "^3.8.3"
   },
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
