@@ -20,7 +20,6 @@ export default [
           comments: 80,
         },
       ],
-      ...playwright.configs['flat/recommended'].rules,
       'playwright/expect-expect': 'off',
     },
     ignores: [
