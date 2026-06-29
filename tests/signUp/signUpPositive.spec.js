@@ -1,5 +1,5 @@
-import { test } from '@playwright/test';
 import { faker } from '@faker-js/faker';
+import { test } from '@playwright/test';
 import { SignUpPage } from '../../src/pages/SignUpPage';
 import { HomePage } from '../../src/pages/HomePage';
 
