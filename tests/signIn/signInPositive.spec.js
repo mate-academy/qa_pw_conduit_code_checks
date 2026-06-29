@@ -21,7 +21,5 @@ test.describe('Sign in positive tests', () => {
     await signInPage.clickSignInButton();
 
     await signInPage.page.waitForLoadState('networkidle');
-
-    console.log(await signInPage.page.locator('body').innerText());
   });
 });
