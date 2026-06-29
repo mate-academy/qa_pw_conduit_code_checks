@@ -24,9 +24,7 @@ test.describe('Sign up negative tests', () => {
     await signUpPage.fillPasswordField('newpass123!');
     await signUpPage.clickSignUpButton();
 
-    await signUpPage.assertErrorMessageContainsText(
-      `email:This email does not seem valid.`,
-    );
+    await signUpPage.assertErrorMessageContainsText(`email:This email does not seem valid.`);
   });
 
   test('Assert error message for empty password in Sign up form', async () => {

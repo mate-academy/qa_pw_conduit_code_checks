@@ -1,15 +1,12 @@
 import { test } from '@playwright/test';
 import { SignInPage } from '../../src/pages/SignInPage';
-import { HomePage } from '../../src/pages/HomePage';
 
 test.describe('Sign in positive tests', () => {
   let signInPage;
-  let homePage;
   let user;
 
   test.beforeEach(async ({ page }) => {
     signInPage = new SignInPage(page);
-    homePage = new HomePage(page);
 
     user = {
       email: 'test_new_user@gmail.com',
@@ -22,7 +19,8 @@ test.describe('Sign in positive tests', () => {
     await signInPage.fillEmailField(user.email);
     await signInPage.fillPasswordField(user.password);
     await signInPage.clickSignInButton();
-    await signInPage.page.waitForTimeout(2000);
+
+    await signInPage.page.waitForLoadState('networkidle');
 
     console.log(await signInPage.page.locator('body').innerText());
   });

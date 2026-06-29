@@ -17,11 +17,20 @@
     "prettier": "^3.9.3"
   },
   "scripts": {
-  "format": "prettier . --write"
-},
-"lint-staged": {
-  "*.js": "eslint --fix"
-},
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
+  },
+  "lint-staged": {
+    "*.{js,mjs,cjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"

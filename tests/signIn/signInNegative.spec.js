@@ -25,8 +25,6 @@ test.describe('Sign in negative tests', () => {
     await signInPage.fillEmailField('test@gmail.com');
     await signInPage.fillPasswordField('1');
     await signInPage.clickSignInButton();
-    await signInPage.assertErrorMessageContainsText(
-      `email or password:is invalid`,
-    );
+    await signInPage.assertErrorMessageContainsText(`email or password:is invalid`);
   });
 });
