@@ -7,9 +7,9 @@ test.describe("Sign in positive tests", () => {
   let homePage;
   let user;
 
-  test.beforeEach(async ({ page }) => {
-    signInPage = new SignInPage(page);
-    homePage = new HomePage(page);
+  test.beforeEach(async () => {
+    signInPage = new SignInPage();
+    homePage = new HomePage();
 
     user = {
       email: "test_new_user@gmail.com",
@@ -17,7 +17,7 @@ test.describe("Sign in positive tests", () => {
     };
   });
 
-  test("Successful `Sign in` flow test", async ({ page }) => {
+  test("Successful `Sign in` flow test", async () => {
     await signInPage.open();
     await signInPage.fillEmailField(user.email);
     await signInPage.fillPasswordField(user.password);
