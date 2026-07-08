@@ -4,6 +4,7 @@ import { SignUpPage } from '../../src/pages/SignUpPage';
 import { HomePage } from '../../src/pages/HomePage';
 
 test.describe('Sign up positive tests', () => {
+  // eslint-disable-next-line no-unused-vars
   let signUpPage;
   let homePage;
   let user;

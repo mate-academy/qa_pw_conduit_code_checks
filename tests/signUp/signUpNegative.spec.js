@@ -15,6 +15,7 @@ test.describe("Sign up negative tests", () => {
     await signUpPage.clickSignUpButton();
 
     await signUpPage.assertErrorMessageContainsText(
+      // eslint-disable-next-line max-len
       `username:Username must start with a letter, have no spaces, and be 2 - 40 characters.`
     );
   });
