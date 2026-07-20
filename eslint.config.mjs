@@ -6,13 +6,13 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   { languageOptions: { globals: globals.node } },
-  eslintConfigPrettier,
   {
     ...pluginJs.configs.recommended,
     ...playwright.configs['flat/recommended'],
     rules: {
       ...pluginJs.configs.recommended.rules,
       'no-unused-vars': 'error',
+      'playwright/expect-expect': 'off',
       'max-len': [
         'error',
         {
@@ -20,8 +20,6 @@ export default [
           comments: 80,
         },
       ],
-      ...playwright.configs['flat/recommended'].rules,
-      'playwright/expect-expect': 'off',
     },
     ignores: [
       '**/node_modules/*',
@@ -29,4 +27,5 @@ export default [
       '**/playwright-report/**',
     ],
   },
+  eslintConfigPrettier,
 ];
