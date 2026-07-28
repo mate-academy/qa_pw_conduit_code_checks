@@ -5,11 +5,10 @@ import playwright from 'eslint-plugin-playwright';
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   { languageOptions: { globals: globals.node } },
+  pluginJs.configs.recommended,
+  playwright.configs['flat/recommended'],
   {
-    ...pluginJs.configs.recommended,
-    ...playwright.configs['flat/recommended'],
     rules: {
-      ...pluginJs.configs.recommended.rules,
       'no-unused-vars': 'error',
       'max-len': [
         'error',
@@ -18,7 +17,6 @@ export default [
           comments: 80,
         },
       ],
-      ...playwright.configs['flat/recommended'].rules,
       'playwright/expect-expect': 'off',
     },
   },
