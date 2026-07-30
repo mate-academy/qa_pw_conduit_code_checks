@@ -4,12 +4,10 @@ import { SignUpPage } from '../../src/pages/SignUpPage';
 import { HomePage } from '../../src/pages/HomePage';
 
 test.describe('Sign up positive tests', () => {
-  let signUpPage;
   let homePage;
   let user;
  
   test.beforeEach( async ({ page }) => {
-     signUpPage = new SignUpPage(page);
      homePage = new HomePage(page);
 
     user = {
