@@ -1,4 +1,13 @@
 {
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css,html}": [
+      "prettier --write"
+    ]
+  },
   "name": "qa_pw_intro",
   "version": "1.0.0",
   "description": "",
@@ -11,11 +20,19 @@
     "@eslint/js": "^10.0.1",
     "@playwright/test": "^1",
     "eslint": "^10.8.0",
+    "eslint-config-prettier": "^10.1.8",
     "globals": "^17.8.0",
     "husky": "^9.1.7",
+    "lint-staged": "^17.2.0",
     "prettier": "^3.9.6"
   },
-  "scripts": {},
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
