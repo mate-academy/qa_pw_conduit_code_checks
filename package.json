@@ -23,13 +23,18 @@
     "test--headed": "npx playwright test --ui",
     "test:debug": "playwright --debug"
   },
+    "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,md}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
   "keywords": [],
   "author": "",
-  "license": "ISC",
- "lint-staged": {
-   "*.{js,md}": [
-     "prettier --write",
-     "eslint --fix"
-   ]
- }
+  "license": "ISC"
 }
