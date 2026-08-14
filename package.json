@@ -17,16 +17,14 @@
     "prettier": "^3.9.6"
   },
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky",
+    "prepare": "husky",
+    "lint": "eslint .",
+    "test": "playwright test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{js,md}": [
       "prettier --write",
